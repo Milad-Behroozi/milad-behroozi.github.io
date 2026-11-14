@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f0e7">
+  <title>Milad Behroozi | Profile Links</title>
+  <meta name="description" content="Find Milad Behroozi on Google Scholar, LinkedIn, ORCID, and GitHub.">
+  <meta property="og:title" content="Milad Behroozi | Profile Links">
+  <meta property="og:description" content="Find Milad Behroozi on Google Scholar, LinkedIn, ORCID, and GitHub.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Instrument+Serif&amp;display=swap">
+  <style>
+    :root {
+      color-scheme: light;
+      --page: #f3f0e7;
+      --panel: #fdfaf3;
+      --ink: #202d26;
+      --line: #dedbcc;
+      --light: #f9f5e9;
+      --serif: "Instrument Serif", Georgia, serif;
+      --sans: "DM Sans", system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(ellipse at 50% 0%, #e6e7d7 0%, var(--page) 38rem);
+      color: var(--ink);
+      font: 400 1rem/1.55 var(--sans);
+    }
+
+    h1, p { margin: 0; }
+    a { color: inherit; }
+    button, input { font: inherit; }
+
+    :focus-visible {
+      outline: 3px solid #86611e;
+      outline-offset: 4px;
+    }
+
+    .page {
+      width: min(100% - 2rem, 35rem);
+      margin: clamp(1rem, 4vw, 3rem) auto;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      padding: 2.65rem 1.75rem 2.35rem;
+      border-radius: 1.75rem;
+      background: radial-gradient(ellipse at 50% 1%, #38594a, #203b32 60%, #1a3028);
+      color: var(--light);
+      text-align: center;
+      box-shadow: 0 15px 34px #182d2915;
+    }
+
+    .hero::before {
+      position: absolute;
+      inset: -1rem 0 auto;
+      height: 15rem;
+      z-index: -1;
+      content: "";
+      background: repeating-radial-gradient(circle at 50% 37%, transparent 0 48px, #e7ddbe35 49px 50px, transparent 51px 68px);
+      mask-image: radial-gradient(ellipse 60% 57% at 50% 36%, black, transparent 90%);
+      pointer-events: none;
+    }
+
+    .hero :focus-visible { outline-color: #ffda9a; }
+
+    .portrait {
+      display: block;
+      width: 6.25rem;
+      height: 6.25rem;
+      margin: 0 auto 0.95rem;
+      border: 1px solid #e8dec68a;
+      border-radius: 50%;
+      background: #233d34;
+      object-fit: cover;
+    }
+
+    h1 {
+      text-wrap: balance;
+      font: 400 clamp(2.75rem, 10vw, 4.65rem)/0.98 var(--serif);
+      letter-spacing: -0.035em;
+    }
+
+    .role {
+      margin-top: 0.9rem;
+      color: #f0efe3;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .share {
+      position: absolute;
+      top: 0.85rem;
+      right: 0.85rem;
+      min-height: 2.75rem;
+      padding: 0.35rem 0.7rem;
+      border: 1px solid #f9f5e949;
+      border-radius: 2rem;
+      background: #20392f;
+      color: var(--light);
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+
+    .share:hover { background: #365448; }
+
+    .share .arrow {
+      margin-left: 0.2rem;
+      color: #e1f0e6;
+    }
+
+    .share-fallback {
+      margin: 0.9rem auto 0;
+      max-width: 22rem;
+      color: #d1ded2;
+      text-align: left;
+      font-size: 0.8rem;
+    }
+
+    .share-fallback input {
+      width: 100%;
+      margin-top: 0.3rem;
+      padding: 0.5rem;
+      border: 0;
+      border-radius: 0.4rem;
+      background: var(--light);
+      color: var(--ink);
+    }
+
+    .share-status:not(:empty) {
+      margin-top: 0.65rem;
+      color: #dce8db;
+      font-size: 0.8rem;
+    }
+
+    .profiles {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.65rem;
+      margin-top: 1rem;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 3.25rem;
+      gap: 0.4rem;
+      padding: 0.55rem 0.9rem;
+      border: 1px solid var(--line);
+      border-radius: 2rem;
+      background: var(--panel);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 150ms ease, border-color 150ms ease;
+    }
+
+    .profile:hover { border-color: #a8b4a4; background: #eef1e8; }
+    .profile-email { grid-column: 1 / -1; }
+    .arrow {
+      position: relative;
+      display: inline-block;
+      flex: none;
+      width: 0.62rem;
+      height: 0.62rem;
+      margin-right: 0.13rem;
+      color: #476255;
+      vertical-align: -0.02rem;
+    }
+
+    .arrow::before {
+      position: absolute;
+      inset: 0 0 auto auto;
+      width: 75%;
+      height: 75%;
+      border-top: 1.5px solid currentColor;
+      border-right: 1.5px solid currentColor;
+      content: "";
+    }
+
+    .arrow::after {
+      position: absolute;
+      top: 50%;
+      right: -15%;
+      width: 130%;
+      border-top: 1.5px solid currentColor;
+      content: "";
+      transform: rotate(-45deg);
+    }
+
+    @media (max-width: 22rem) {
+      .hero { padding-right: 1rem; padding-left: 1rem; }
+    }
+
+    @media (max-width: 20rem) {
+      .profiles { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .profile { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <button class="share" type="button" id="share-profile" hidden>Share <span class="arrow" aria-hidden="true"></span></button>
+      <img class="portrait" src="profile.jpg" alt="Portrait of Milad Behroozi" width="100" height="100">
+      <h1>Milad Behroozi</h1>
+      <p class="role">PhD Candidate in Chemistry</p>
+      <p class="share-status" id="share-status" role="status"></p>
+      <div class="share-fallback" id="share-fallback" hidden>
+        <label for="profile-url">Copy this profile link</label>
+        <input type="url" id="profile-url" readonly>
+      </div>
+    </header>
+
+    <nav class="profiles" aria-label="Profiles and contact">
+      <a class="profile" href="https://scholar.google.com/citations?hl=en&amp;user=ZNF36DQAAAAJ">Google Scholar <span class="arrow" aria-hidden="true"></span></a>
+      <a class="profile" href="https://tr.linkedin.com/in/milad-behroozi-566447148">LinkedIn <span class="arrow" aria-hidden="true"></span></a>
+      <a class="profile" href="https://orcid.org/0000-0003-4151-9610">ORCID <span class="arrow" aria-hidden="true"></span></a>
+      <a class="profile" href="https://github.com/Milad-Behroozi">GitHub <span class="arrow" aria-hidden="true"></span></a>
+      <a class="profile profile-email" href="mailto:miladbehroozi@hotmail.com">Email <span class="arrow" aria-hidden="true"></span></a>
+    </nav>
+  </main>
+
+  <script>
+    const shareButton = document.getElementById("share-profile");
+    const shareStatus = document.getElementById("share-status");
+    const shareFallback = document.getElementById("share-fallback");
+    const profileUrl = document.getElementById("profile-url");
+
+    if (["http:", "https:"].includes(window.location.protocol)) {
+      shareButton.hidden = false;
+      shareButton.addEventListener("click", async () => {
+        const url = new URL(window.location.href);
+        url.hash = "";
+        url.search = "";
+
+        if (navigator.share) {
+          try {
+            await navigator.share({ title: document.title, url: url.href });
+            return;
+          } catch (error) {
+            if (error.name === "AbortError") return;
+          }
+        }
+
+        try {
+          await navigator.clipboard.writeText(url.href);
+          shareFallback.hidden = true;
+          shareStatus.textContent = "Profile link copied.";
+        } catch {
+          shareStatus.textContent = "";
+          profileUrl.value = url.href;
+          shareFallback.hidden = false;
+          profileUrl.focus();
+          profileUrl.select();
+        }
+      });
+    }
+  </script>
+</body>
+</html>
